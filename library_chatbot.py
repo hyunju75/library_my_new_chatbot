@@ -58,7 +58,7 @@ def get_vectorstore(_docs):
 # PDF 문서 로드-벡터 DB 저장-검색기-히스토리 모두 합친 Chain 구축
 @st.cache_resource
 def initialize_components(selected_model):
-    file_path = r"/mount/src/library_my_new_chatbot/2024학년도 졸업요건 안내자료.pdf"  #1
+    file_path = r"/mount/src/library_my_new_chatbot/2024학년도졸업요건안내자료.pdf"  #1
     pages = load_and_split_pdf(file_path)
     vectorstore = get_vectorstore(pages)
     retriever = vectorstore.as_retriever()
